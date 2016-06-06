@@ -171,7 +171,7 @@ namespace EmployeeDataSolution.Model
             if (errorList.ContainsKey(propertyName))
             {
                 errorList[propertyName].Remove(errorMessage);
-                if (errorList[propertyName].Count == 0)
+                if (errorList[propertyName].Count != 0)
                 {
                     errorList.Remove(propertyName);
                 }

@@ -91,7 +91,11 @@ namespace EmployeeDataSolution.Viewmodel
                 && !string.IsNullOrEmpty(employee.Age)
                 && !string.IsNullOrEmpty(employee.Name))
             {
-                EmployeeList.Add(employee);
+                EmployeeBE emp = new EmployeeBE();
+                emp.Id = employee.Id;
+                emp.Age = employee.Age;
+                emp.Name = employee.Name;
+                EmployeeList.Add(emp);
             }
             else
             {
