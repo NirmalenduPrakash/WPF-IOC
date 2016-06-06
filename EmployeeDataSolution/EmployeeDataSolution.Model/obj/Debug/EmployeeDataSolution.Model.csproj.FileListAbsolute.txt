@@ -1,0 +1,5 @@
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Model\bin\Debug\EmployeeDataSolution.Model.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Model\bin\Debug\EmployeeDataSolution.Model.pdb
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Model\obj\Debug\EmployeeDataSolution.Model.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Model\obj\Debug\EmployeeDataSolution.Model.pdb
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Model\obj\Debug\EmployeeDataSolution.Model.csprojResolveAssemblyReference.cache

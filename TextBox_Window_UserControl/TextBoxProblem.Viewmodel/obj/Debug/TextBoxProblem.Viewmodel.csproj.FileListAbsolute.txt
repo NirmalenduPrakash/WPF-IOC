@@ -1,0 +1,5 @@
+c:\Study\Projects\solution\TextBoxProblem.Viewmodel\bin\Debug\TextBoxProblem.Viewmodel.dll
+c:\Study\Projects\solution\TextBoxProblem.Viewmodel\bin\Debug\TextBoxProblem.Viewmodel.pdb
+c:\Study\Projects\solution\TextBoxProblem.Viewmodel\obj\Debug\TextBoxProblem.Viewmodel.csprojResolveAssemblyReference.cache
+c:\Study\Projects\solution\TextBoxProblem.Viewmodel\obj\Debug\TextBoxProblem.Viewmodel.dll
+c:\Study\Projects\solution\TextBoxProblem.Viewmodel\obj\Debug\TextBoxProblem.Viewmodel.pdb

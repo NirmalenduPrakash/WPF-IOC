@@ -1,0 +1,17 @@
+c:\Study\Projects\solution\TextBoxProblem\bin\Debug\TextBoxProblem.exe.config
+c:\Study\Projects\solution\TextBoxProblem\bin\Debug\TextBoxProblem.exe
+c:\Study\Projects\solution\TextBoxProblem\bin\Debug\TextBoxProblem.pdb
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.csprojResolveAssemblyReference.cache
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\UserControl1.baml
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\MainWindow.g.cs
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\UserControl1.g.cs
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\App.g.cs
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem_MarkupCompile.cache
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem_MarkupCompile.lref
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\MainWindow.baml
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.g.resources
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.Properties.Resources.resources
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.csproj.GenerateResource.Cache
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.exe
+c:\Study\Projects\solution\TextBoxProblem\obj\Debug\TextBoxProblem.pdb

@@ -1,0 +1,90 @@
+﻿<Window x:Class="EmployeeDataSolution.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Employee Data Solution" Height="350" Width="525"
+        xmlns:converter="clr-namespace:EmployeeDataSolution.View.Converter"
+        xmlns:viewmodel="clr-namespace:EmployeeDataSolution.Viewmodel;assembly=EmployeeDataSolution.Viewmodel">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="15,10,0,0"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Storyboard x:Key="sbShowError">
+            <!--<ColorAnimation Storyboard.TargetName="ErrorElement" Storyboard.TargetProperty="BorderBrush.Color" To="Red"/>-->
+            <DoubleAnimation Storyboard.TargetName="ErrorElement" Storyboard.TargetProperty="Opacity" To="1"/>
+        </Storyboard>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="15,10,0,0"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self},Path=(Validation.Errors)[0].ErrorContent}"/>
+            <!--<Setter Property="Tag" Value="(Visibility.Collapsed)"/>-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ValidationStates">
+                                    <VisualState x:Name="Valid"/>
+                                    <VisualState x:Name="InvalidFocused" Storyboard="{StaticResource sbShowError}"/>
+                                    <VisualState x:Name="InvalidUnfocused" Storyboard="{StaticResource sbShowError}"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border  BorderBrush="Gray" BorderThickness="1">
+                                <ScrollViewer  x:Name="PART_ContentHost"/>
+                            </Border>
+                            <Border x:Name="ErrorElement" ToolTip="{TemplateBinding ToolTip}" BorderThickness="1" BorderBrush="Red" Opacity="0" Visibility="{TemplateBinding Tag}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <viewmodel:EmployeeViewmodel x:Key="viewmodel"/>        
+    </Window.Resources>
+    <Grid DataContext="{StaticResource viewmodel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="{Binding Message}" Visibility="{Binding ShowMessage,Converter={StaticResource BoolToVisibilityConverter}}" Foreground="Red"/>
+        <Grid x:Name="grdInput" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Id"/>
+            <TextBlock Text="Name" Grid.Row="1"/>
+            <TextBlock Text="Age" Grid.Row="2"/>
+            <TextBox x:Name="txtboxId" Text="{Binding Employee.Id,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Grid.Column="1" Validation.ErrorTemplate="{x:Null}"/>
+            <TextBox x:Name="txtboxName" Text="{Binding Employee.Name,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Grid.Row="1" Grid.Column="1" Validation.ErrorTemplate="{x:Null}"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                <TextBox x:Name="txtboxAge" Text="{Binding Employee.Age,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Validation.ErrorTemplate="{x:Null}"/>
+                <CheckBox x:Name="chkAge" VerticalAlignment="Stretch" Width="20" VerticalContentAlignment="Center" Margin="5,10,0,0" IsChecked="{Binding IsAgeChecked}"/>
+            </StackPanel>
+            <Button Grid.Row="2" Grid.Column="2" Content="Ok" Width="40" Command="{Binding AddEmployeeCommand}" Click="OkButton_Click"
+                    HorizontalAlignment="Left" Height="25" Margin="5,5,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <DataGrid Grid.Row="2" ItemsSource="{Binding EmployeeList}" Margin="5,15" AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Age" Width="*" Binding="{Binding Age}"
+                Visibility="{Binding Source={StaticResource viewmodel},Path=IsAgeChecked,Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

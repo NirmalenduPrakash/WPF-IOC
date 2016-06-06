@@ -1,0 +1,5 @@
+D:\Project\InversionOfControl\Proj3\bin\Debug\Proj3.dll
+D:\Project\InversionOfControl\Proj3\bin\Debug\Proj3.pdb
+D:\Project\InversionOfControl\Proj3\obj\Debug\Proj3.csprojResolveAssemblyReference.cache
+D:\Project\InversionOfControl\Proj3\obj\Debug\Proj3.dll
+D:\Project\InversionOfControl\Proj3\obj\Debug\Proj3.pdb

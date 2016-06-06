@@ -1,0 +1,9 @@
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Viewmodel.UnitTests.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Viewmodel.UnitTests.pdb
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Model.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Viewmodel.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Model.pdb
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\bin\Debug\EmployeeDataSolution.Viewmodel.pdb
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\obj\Debug\EmployeeDataSolution.Viewmodel.UnitTests.csprojResolveAssemblyReference.cache
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\obj\Debug\EmployeeDataSolution.Viewmodel.UnitTests.dll
+D:\Project\EmployeeDataSolution\EmployeeDataSolution.Viewmodel.UnitTests\obj\Debug\EmployeeDataSolution.Viewmodel.UnitTests.pdb
